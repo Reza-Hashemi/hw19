@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('./common/head'); -%>
+</head>
+<body>
+    <div class="container pt-2">
+      <%- include('./common/navbar.ejs')  %>
+        <div class="text-end">
+          <a href="/dashboard/logout" class="btn btn-danger">logout</a>
+        </div>
+        
+        <br>
+        <form action="/dashboard" method="POST">
+          <div class="form-floating mb-3">
+            <label for="fistNameInput">First Name</label>
+              <input type="text"
+              name="firstname"
+              disabled
+              class="mt-2 form-control"
+              value="<%= user.firstname %>"
+              placeholder="firstname">
+              
+          </div>
+          <div class="form-floating mb-3">
+            <label for="lastNameInput">Last Name</label>
+              <input type="text"
+              name="lastname"
+              disabled
+              class="mt-2 form-control"
+              value="<%= user.lastname %>"
+              placeholder="Last Name">
+              
+          </div>
+          <div class="form-floating mb-3">
+            <label for="UsernameInput">Username</label>
+              <input type="text"
+              name="username"
+              disabled
+              class="mt-2 form-control"
+              value="<%= user.username %>"
+              placeholder="Username">
+              
+          </div>
+          <div class="form-floating mb-3">
+            <label for="paswordInput">Password</label>
+              <input type="text"
+              name="password"
+              disabled
+              id="ps"
+              class="mt-2 form-control"
+              value="<%= user.password %>"
+              placeholder="Password">
+              
+          </div>
+          <div class="form-floating mb-3">
+            <label for="paswordInput">phone</label>
+            <input type="text"
+            name="phone"
+            disabled
+            class="mt-2 form-control"
+            value="<%= user.phone %>"
+            placeholder="Password">
+            
+        </div>
+        <div class="form-floating mb-3">
+          <label for="paswordInput">gender (male , female)</label>
+          <input type="text"
+          name="gender"
+          disabled
+          class="mt-2 form-control"
+          value="<%= user.gender %>"
+          placeholder="Password">
+          
+        </div>
+        <br>
+        <div>
+        <input
+        type="button"
+        value="edit"
+        class="mt-2 btn btn-warning"
+        id="editBtn"
+      />
+      <input
+        type="submit"
+        value="save"
+        class="mt-2 btn btn-success d-none"
+        id="saveBtn"
+      />
+      <a href="/dashboard/deleteblogger" class="btn btn-danger">delete</a>
+          
+        </div>
+        <script src="/javascripts/dashboard.js"></script>
+</body>
+</html>
+

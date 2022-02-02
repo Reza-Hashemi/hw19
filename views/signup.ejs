@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <%- include('./common/head.ejs'); %>
+  </head>
+
+  <body>
+    <%- include('./common/navbar.ejs')  %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <span class="text-center mb-5 text-danger fs-5"><%= msg %></span>
+              <form action="/signup" method="POST">
+                <div class="form-floating mb-3">
+                  <label for="fistNameInput">First Name</label>
+                  <input
+                    name="firstname"
+                    type="text"
+                    class="form-control"
+                    id="fistNameInput"
+                    placeholder="First Name"
+                  />
+                 
+                </div>
+                <div class="form-floating mb-3">
+                  <label for="lastNameInput">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    class="form-control"
+                    id="lastNameInput"
+                    placeholder="Last Name"
+                  />
+                  
+                </div>
+                <div class="form-floating mb-3">
+                  <label for="UsernameInput">Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    class="form-control"
+                    id="UsernameInput"
+                    placeholder="Username"
+                  />
+                  
+                </div>
+                <div class="form-floating mb-3">
+                  <label for="paswordInput">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    id="paswordInput"
+                    placeholder="Password"
+                  />
+                  
+                </div>
+                <div class="form-floating mb-3">
+                  <label for="paswordInput">phone</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    id="paswordInput"
+                    placeholder="Phone"
+                  />
+                  
+                </div>
+                <div class="form-floating mb-3">
+                  <label for="paswordInput">gender (male , female)</label>
+                  <input
+                    type="text"
+                    name="gender"
+                    class="form-control"
+                    id="paswordInput"
+                    placeholder="Gender"
+                  />
+                  
+                </div>
+
+                <div class="d-grid">
+                  <br>
+                  <button
+                    class="btn btn-primary btn-login text-uppercase fw-bold"
+                    type="submit"
+                  >
+                    sign up
+                  </button>
+                </div>
+               
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
